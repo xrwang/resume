@@ -1,12 +1,12 @@
-name: Jube Shprangler
+name: Xiaowei R. Wang
 
-location: Cape Ricky, DE
-phone: +1 (555) 555 5555
-email: jubeguy91@live.com
+location: Emeryville, CA
+phone: +1 (857) 225-4482
+email: xiaowei.r.wang@gmail.com
 
-website: dongles.net
-github: jubeguy91
-linkedin: jubeguy91
+website: http://xrwang.github.io
+github: xrwang
+linkedin: https://www.linkedin.com/in/xiaoweirwang/
 
 work:
   -
@@ -24,11 +24,11 @@ work:
 
 education:
   -
-    school: Institute of Facts
+    school: University of San Francisco Data Institute
     location: Online
     year: 2011
-    degree: Associates Degree
-    focus: Dongle Technology
+    degree: Certificate in Deep Learning
+    focus: Fast.ai certificate in deep learning
 
 publications:
   -
@@ -43,7 +43,7 @@ projects:
     date: 2015-Present
     description: "A yearly conference bringing together the dongle community. Past keynote speakers include Gary Cello, JJ Gobler and Tiffany Columnhouse-Guntherton."
 
-volunteering:
+service:
   -
     organization: Dongles 2 the Kidz
     location: Cape Todd, DE
