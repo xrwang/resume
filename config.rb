@@ -48,4 +48,4 @@
 # end
 
 activate :directory_indexes
-activate :livereload
+# activate :livereload

@@ -71,7 +71,7 @@ header > p {
 }
 
 header p {
-  font-size: .8em;
+  font-size: .9em;
   line-height: 1.6;
   padding-top: 2px;
 }
@@ -85,7 +85,7 @@ section section {
 }
 
 h1 {
-  font-family: 'Apercu Pro';
+  font-family: 'Apercu Pro Medium';
   font-size: 1.8em;
   font-weight: 100;
   letter-spacing: 0.05em;
@@ -100,22 +100,22 @@ h3 {
 }
 
 section h1 {
-  font-size: 1.3em;
+  font-size: 1.4em;
   font-style: italic;
-  font-weight: 100;
+  font-weight: bold;
   margin: 0;
   letter-spacing: 0.02em;
 }
 
 section section h1 {
-  font-size: 1em;
+  font-size: 1.1em;
   font-style: normal;
   font-weight: 500;
   margin: 0;
 }
 
 section section p {
-  font-size: .9em;
+  font-size: 1.1em;
 }
 
 strong {

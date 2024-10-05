@@ -3,10 +3,9 @@
 source 'https://rubygems.org'
 
 # Uncomment to specify Ruby version
-ruby '2.2.1'
+ruby '3.3.1'
 
-gem "middleman", "~>3.4.0"
+gem "middleman", "4.5.1"
 
-gem "middleman-slim"
 
-gem "middleman-livereload", "~> 3.4.3"
+# gem "middleman-livereload", "~> 3.4.3"
