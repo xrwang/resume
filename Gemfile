@@ -5,7 +5,6 @@ source 'https://rubygems.org'
 # Uncomment to specify Ruby version
 ruby '3.3.1'
 
-gem "middleman", "4.5.1"
-
-
-# gem "middleman-livereload", "~> 3.4.3"
+gem "rack", "~> 2.2"
+gem "puma", "~> 6.4"
+gem "grover", "~> 1.1"

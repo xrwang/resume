@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>resume-<%= Time.now.to_i %></title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Mono&display=swap" rel="stylesheet">
+    <link href="style.css" rel="stylesheet" />
+    <style><%= File.read("source/style.css") %></style>
+  </head>
+
+  <body>
+
+    <header>
+      <div>
+        <h1><%= data.name %></h1>
+        <h2>
+      </div>
+      <p>
+        <%= data.location %>
+        <br />
+        <%= data.phone %>
+        <br />
+        <%= data.email %>
+      </p>
+      <p>
+        <%= data.website %>
+        <br />
+        github: <%= data.github %>
+        <br />
+        linkedin: <%= data.linkedin %>
+      </p>
+    </header>
+
+    <section>
+      <h1>Education</h1>
+      <section>
+        <% data.education.each do |edu| %>
+          <section>
+            <h1><%= edu.school %></h1>
+            <p><%= edu.location %></p>
+            <p><%= edu.year %>, <%= edu.degree %>, <%= edu.focus %></p>
+          </section>
+        <% end %>
+      </section>
+    </section>
+
+    <section>
+      <h1>Projects &amp; Publications</h1>
+      <section>
+        <% data.projects.each do |project| %>
+          <section>
+            <h1><%= project.title %></h1>
+            <h3><%= project.url %></h3>
+            <p><%= project.collaborators %>, <%= project.date %></p>
+            <p><%= project.description %></p>
+          </section>
+        <% end %>
+      </section>
+    </section>
+
+    <section>
+      <h1>Teaching Experience</h1>
+      <section>
+        <% data.teaching.each do |v| %>
+          <section>
+            <h1><%= v.organization %></h1>
+            <p><em><%= v.title %></em>, <%= v.date %>, <%= v.location %></p>
+          </section>
+        <% end %>
+      </section>
+    </section>
+
+    <section>
+      <h1>Grants &amp; Awards</h1>
+      <section>
+        <% data.awards.each do |v| %>
+          <section>
+            <h1><%= v.organization %></h1>
+            <p><em><%= v.title %></em>, <%= v.date %></p>
+          </section>
+        <% end %>
+      </section>
+    </section>
+
+    <section>
+      <h1>Research &amp; Fellowships</h1>
+      <section>
+        <% data.research.each do |v| %>
+          <section>
+            <h1><%= v.organization %></h1>
+            <p><em><%= v.title %></em>, <%= v.date %></p>
+          </section>
+        <% end %>
+      </section>
+    </section>
+
+    <section>
+      <h1>Noted Talks</h1>
+      <section>
+        <% data.featuredtalks.each do |talk| %>
+          <section>
+            <h1><%= talk.title %></h1>
+            <p><%= talk.location %>, <%= talk.date %><% if !talk.url.nil? %>, <%= talk.url %><% end %></p>
+          </section>
+        <% end %>
+      </section>
+    </section>
+
+    <section>
+      <h1>Invited Talks, Presentations &amp; Guest Reviews (guest critic for Design and Engineering students)</h1>
+      <section>
+        <% data.talks.each do |talk| %>
+          <section>
+            <h1><%= talk.title %></h1>
+            <p><%= talk.description %></p>
+          </section>
+        <% end %>
+      </section>
+    </section>
+
+    <section>
+      <h1>Press, Selected Media Coverage &amp; Reviews</h1>
+      <section>
+        <% data.press.each do |pub| %>
+          <section>
+            <h1>&ldquo;<%= pub.title %>&rdquo;</h1>
+            <p><%= pub.url %></p>
+            <p>by <%= pub.authors %>. <em><%= pub.publisher %></em>, <%= pub.date %></p>
+          </section>
+        <% end %>
+      </section>
+    </section>
+
+    <section>
+      <h1>Work Experience</h1>
+      <section>
+        <% data.work.each do |position| %>
+          <section>
+            <h1><%= position.company %></h1>
+            <p><em><%= position.title %></em>, <%= position.duration %> &bull; <%= position.location %>
+            <p><%= position.description %></p>
+          </section>
+        <% end %>
+      </section>
+    </section>
+
+    <section>
+      <h1>Awarded Residencies &amp; Exhibitions</h1>
+      <section>
+        <% data.fellowships.each do |v| %>
+          <section>
+            <h1><%= v.organization %></h1>
+            <p><em><%= v.title %></em>, <%= v.date %></p>
+          </section>
+        <% end %>
+      </section>
+    </section>
+
+
+    <section>
+      <h1>Service &amp; Memberships</h1>
+      <section>
+        <% data.service.each do |v| %>
+          <section>
+            <h1><%= v.organization %></h1>
+            <p><em><%= v.title %></em><% if !v.date.nil? %>, <%= v.date %><% end %><% if !v.location.nil? %> &bull; <%= v.location %><% end %></p>
+            <p><%= v.description %></p>
+          </section>
+        <% end %>
+      </section>
+    </section>
+
+  </body>
+</html>
