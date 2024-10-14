@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>resume-<%= Time.now.to_i %></title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Mono&display=swap" rel="stylesheet">
+    <link href="style.css" rel="stylesheet" />
+    <style><%= File.read("source/style.css") %></style>
+  </head>
+
+  <body>
+
+    <header>
+      <div>
+        <h1><%= data.name %></h1>
+        <h2>
+      </div>
+      <p>
+        <%= data.location %>
+        <br />
+        <%= data.phone %>
+        <br />
+        <%= data.email %>
+      </p>
+      <p>
+        <%= data.website %>
+        <br />
+        github: <%= data.github %>
+        <br />
+        linkedin: <%= data.linkedin %>
+      </p>
+    </header>
+
+    <section>
+      <h1>Education</h1>
+      <table>
+        <thead>
+          <tr>
+            <td>Degree</td>
+            <td>Organization</td>
+            <td>Year</td>
+          </tr>
+        </thead>
+        <tbody>
+        <% data.education.each do |edu| %>
+          <tr>
+            <td><%= edu.degree %>, <%= edu.focus %></td>
+            <td><%= edu.school %>, <%= edu.location %></td>
+            <td><%= edu.year %></td>
+          </tr>
+        <% end %>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h1>Projects &amp; Publications</h1>
+      <table>
+        <thead>
+          <tr>
+            <td>Title</td>
+            <td>Description</td>
+            <td>Year, Role</td>
+          </tr>
+        </thead>
+        <tbody>
+        <% data.projects.each do |project| %>
+          <tr>
+            <td><%= project.title %></td>
+            <td><%= project.description %><% if !project.url.nil? %><br/><a href="<%= project.url %>"><%= project.url %></a><% end %></td>
+            <td><%= project.date %>, <%= project.collaborators %></td>
+          </tr>
+        <% end %>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h1>Teaching Experience</h1>
+      <table>
+        <thead>
+          <tr>
+            <td>Role</td>
+            <td>Organization</td>
+            <td>Date</td>
+          </tr>
+        </thead>
+        <tbody>
+        <% data.teaching.each do |teaching| %>
+          <tr>
+            <td><%= teaching.title %></td>
+            <td><%= teaching.organization %>, <%= teaching.location %></td>
+            <td><%= teaching.date %></td>
+          </tr>
+        <% end %>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h1>Grants &amp; Awards</h1>
+      <table>
+        <thead>
+          <tr>
+            <td>Organization</td>
+            <td>Description</td>
+            <td>Date</td>
+          </tr>
+        </thead>
+        <tbody>
+        <% data.awards.each do |award| %>
+          <tr>
+            <td><%= award.organization %></td>
+            <td><%= award.title %></td>
+            <td><%= award.date %></td>
+          </tr>
+        <% end %>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h1>Fellowships</h1>
+      <table>
+        <thead>
+          <tr>
+            <td>Organization</td>
+            <td>Title</td>
+            <td>Date</td>
+          </tr>
+        </thead>
+        <tbody>
+        <% data.research.each do |research| %>
+          <tr>
+            <td><%= research.organization %></td>
+            <td><%= research.title %></td>
+            <td><%= research.date %></td>
+          </tr>
+        <% end %>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h1>Featured Talks</h1>
+      <table>
+        <thead>
+          <tr>
+            <td>Title</td>
+            <td>Location</td>
+            <td>Date</td>
+          </tr>
+        </thead>
+        <tbody>
+        <% data.featuredtalks.each do |talk| %>
+          <tr>
+            <td><%= talk.title %></td>
+            <td><%= talk.location %><% if !talk.url.nil? %><br/><a href="<%= talk.url %>"><%= talk.url %></a><% end %></td>
+            <td><%= talk.date %></td>
+          </tr>
+        <% end %>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h1>Invited Talks</h1>
+      <table>
+        <thead>
+          <tr></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><%= data.talks %></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h1>Press, Selected Media Coverage &amp; Reviews</h1>
+      <table>
+        <thead>
+          <tr>
+            <td>Title, URL</td>
+            <td>Publisher, Authors</td>
+            <td>Date</td>
+          </tr>
+        </thead>
+        <tbody>
+        <% data.press.each do |pub| %>
+          <tr>
+            <td>&ldquo;<%= pub.title %>&rdquo;<% if pub.url %><br/><a href="<%= pub.url %>"><%= pub.url %></a><% end %></td>
+            <td><em><%= pub.publisher %></em><% if pub.authors %>, <%= pub.authors %><% end %></td>
+            <td><%= pub.date %></td>
+          </tr>
+        <% end %>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h1>Work Experience</h1>
+      <table>
+        <thead>
+          <tr>
+            <td>Company, Title</td>
+            <td>Description</td>
+            <td>Location, Duration</td>
+          </tr>
+        </thead>
+        <tbody>
+        <% data.work.each do |position| %>
+          <tr>
+            <td><%= position.company %>, <em><%= position.title %></em></td>
+            <td><%= position.description %></td>
+            <td><%= position.location %>, <%= position.duration %></td>
+          </tr>
+        <% end %>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h1>Awarded Residencies &amp; Exhibitions</h1>
+      <table>
+        <thead>
+          <tr>
+            <td>Organization</td>
+            <td>Title</td>
+            <td>Date</td>
+          </tr>
+        </thead>
+        <tbody>
+        <% data.fellowships.each do |fellowship| %>
+          <tr>
+            <td><%= fellowship.organization %></td>
+            <td><%= fellowship.title %><% if fellowship.url %><br/><a href="<%= fellowship.url %>"><%= fellowship.url %></a><% end %></td>
+            <td><%= fellowship.date %></td>
+          </tr>
+        <% end %>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h1>Service &amp; Memberships</h1>
+      <table>
+        <thead>
+          <tr>
+            <td>Organization, Title</td>
+            <td>Location</td>
+            <td>Date</td>
+          </tr>
+        </thead>
+        <tbody>
+        <% data.service.each do |service| %>
+          <tr>
+            <td><%= service.organization %>, <em><%= service.title %></em></td>
+            <td><%= service.location %><% if service.location && service.url %>, <% end %><% if service.url %><a href="<%= service.url %>"><%= service.url %></a><% end %></td>
+            <td><%= service.date %></td>
+          </tr>
+        <% end %>
+        </tbody>
+      </table>
+    </section>
+
+  </body>
+</html>

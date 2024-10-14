@@ -3,3 +3,4 @@
 *.swp
 data/resume.yml
 build
+node_modules

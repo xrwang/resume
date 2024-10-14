@@ -3,10 +3,10 @@
 source 'https://rubygems.org'
 
 # Uncomment to specify Ruby version
-ruby '2.2.1'
+ruby '3.3.1'
 
-gem "middleman", "~>3.4.0"
+gem "rack", "~> 2.2"
+gem "puma", "~> 6.4"
 
-gem "middleman-slim"
-
-gem "middleman-livereload", "~> 3.4.3"
+# only install if you want to work on the PDF exporter (experimental)
+# gem "grover", "~> 1.1"

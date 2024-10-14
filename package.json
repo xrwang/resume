@@ -1,0 +1,17 @@
+{
+  "name": "resume-builder",
+  "version": "1.0.0",
+  "description": "use [middleman](https://middlemanapp.com/), CSS and a [slim template](http://slim-lang.com/) to render a static webpage and then save it to a pdf from chrome",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "puppeteer": "^23.5.0"
+  }
+}
