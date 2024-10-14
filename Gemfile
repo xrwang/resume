@@ -3,7 +3,7 @@
 source 'https://rubygems.org'
 
 # Uncomment to specify Ruby version
-ruby '3.3.1'
+ruby '3.3.5'
 
 gem "rack", "~> 2.2"
 gem "puma", "~> 6.4"
