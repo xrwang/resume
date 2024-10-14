@@ -1,35 +1,10 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    combine_pdf (1.0.26)
-      matrix
-      ruby-rc4 (>= 0.1.5)
-    grover (1.1.10)
-      combine_pdf (~> 1.0)
-      nokogiri (~> 1.0)
-    matrix (0.4.2)
-    mini_portile2 (2.8.7)
     nio4r (2.7.3)
-    nokogiri (1.16.7)
-      mini_portile2 (~> 2.8.2)
-      racc (~> 1.4)
-    nokogiri (1.16.7-aarch64-linux)
-      racc (~> 1.4)
-    nokogiri (1.16.7-arm-linux)
-      racc (~> 1.4)
-    nokogiri (1.16.7-arm64-darwin)
-      racc (~> 1.4)
-    nokogiri (1.16.7-x86-linux)
-      racc (~> 1.4)
-    nokogiri (1.16.7-x86_64-darwin)
-      racc (~> 1.4)
-    nokogiri (1.16.7-x86_64-linux)
-      racc (~> 1.4)
     puma (6.4.3)
       nio4r (~> 2.0)
-    racc (1.8.1)
     rack (2.2.9)
-    ruby-rc4 (0.1.5)
 
 PLATFORMS
   aarch64-linux-gnu
@@ -45,7 +20,6 @@ PLATFORMS
   x86_64-linux-musl
 
 DEPENDENCIES
-  grover (~> 1.1)
   puma (~> 6.4)
   rack (~> 2.2)
 
